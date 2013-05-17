@@ -1,0 +1,29 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/rymanalo/Dropbox/WDI/graphing_api_data/app/controllers/application_controller.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/rymanalo/Dropbox/WDI/graphing_api_data/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/rymanalo/Dropbox/WDI/graphing_api_data/app/helpers/github_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/rymanalo/Dropbox/WDI/graphing_api_data/app/controllers/github_controller.rb": [
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null
+      ]
+    },
+    "timestamp": 1368741996
+  }
+}
