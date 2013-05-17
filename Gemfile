@@ -11,6 +11,7 @@ group :development, :test do
   gem 'simplecov'
 end
 
+gem 'pg'
 gem "octokit"
 gem 'certified'
 
