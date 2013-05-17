@@ -24,6 +24,7 @@ class GithubController < ApplicationController
       title: "Commits per Day",
       type: "bar",
       color: "blue",
+      refreshEveryNSeconds: 10,
       datasequences: [
         { title: "Daily Commits",
           datapoints: commits_per_day}]
