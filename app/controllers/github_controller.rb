@@ -25,6 +25,7 @@ class GithubController < ApplicationController
       xAxis: {showEveryLabel: true},
       type: "line",
       color: "blue",
+      total: true,
       refreshEveryNSeconds: 10,
       datasequences: [
         { title: "Daily Commits",
