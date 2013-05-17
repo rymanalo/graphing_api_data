@@ -22,6 +22,7 @@ class GithubController < ApplicationController
 
     response = {graph: {
       title: "Commits per Day",
+      xAxis: {showEveryLabel: true},
       type: "bar",
       color: "blue",
       refreshEveryNSeconds: 10,
