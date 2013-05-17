@@ -1,6 +1,3 @@
-require 'openssl'
-require 'open-uri'
-
 class GithubController < ApplicationController
 
   def statusboard
@@ -9,8 +6,6 @@ class GithubController < ApplicationController
     client = Octokit::Client.new(:login => "me", :oauth_token => ENV['GITHUB_TOKEN'])
     repos = client.repositories("rymanalo")
     repo_names = repos.map {|repo| repo['name']}
-
-
 
     repo_commits = repo_names.map do |name|
       client.commits("rymanalo/#{name}").map do |sha|
@@ -25,9 +20,17 @@ class GithubController < ApplicationController
       {"title" => day, "value" => (commits.select {|commit| commit == day}).count}
     end
 
-    datapoints = commits_per_day
+    response = {graph: {
+      title: "Commits per Day",
+      type: "bar",
+      color: "blue",
+      datasequences: [
+        { title: "Daily Commits",
+          datapoints: commits_per_day}]
+      }}
 
-    render :json => datapoints
+
+    render :json => response
   end
 
 end
